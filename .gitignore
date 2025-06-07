@@ -1,0 +1,12 @@
+# Ignore node modules
+node_modules/
+games_backend/node_modules/
+games_admin/node_modules/
+
+# Ignore environment files
+.env
+games_backend/.env
+games_admin/.env
+
+# Ignore build files
+games_admin/build/
