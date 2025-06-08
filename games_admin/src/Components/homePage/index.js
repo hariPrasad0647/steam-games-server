@@ -23,6 +23,7 @@ const HomePage = () => {
         const errors = validateForm(formValues)
         setFormErrors(errors)
         setIsSubmit(true)
+        console.log(isSubmit)
 
         if (Object.keys(errors).length === 0) {
             const finalData = {
