@@ -1,6 +1,8 @@
 const mongoose = require('mongoose')
 const express = require('express')
 const cors = require('cors')
+require('dotenv').config();
+
 const app = express()
 
 app.use(express.json())
@@ -35,7 +37,7 @@ app.post('/api/:collection', async (req, res) => {
   }
 })
 
-mongoose.connect('mongodb+srv://hariprasad0647:dzJsklpCr8WGzXDh@crudpratice.encfrrk.mongodb.net/?retryWrites=true&w=majority&appName=crudPratice')
+mongoose.connect(process.env.MONGO_URI)
   .then(() => {
     console.log('connected to DB')
     app.listen(5000, () => {

@@ -1,7 +1,7 @@
 # Ignore node modules
 node_modules/
 games_backend/node_modules/
-#games_admin/node_modules/
+games_admin/node_modules/
 
 # Ignore environment files
 .env
