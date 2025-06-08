@@ -8,6 +8,9 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
+const PORT = process.env.PORT || 5000
+
+
 const schema = new mongoose.Schema({
   gameName: String,
   steamLink: String,
@@ -40,8 +43,8 @@ app.post('/api/:collection', async (req, res) => {
 mongoose.connect(process.env.MONGO_URI)
   .then(() => {
     console.log('connected to DB')
-    app.listen(5000, () => {
-      console.log('server running at http://localhost:5000')
+    app.listen(PORT, () => {
+      console.log(`server running on PORT ${PORT}`)
     })
   })
   .catch((e) => {
