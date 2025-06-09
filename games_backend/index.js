@@ -36,7 +36,7 @@ app.post('/api/:collection', async (req, res) => {
     res.status(201).json({ message: "Posted successfully" })
   } catch (e) {
     console.log(e.message)
-    res.status(500).json({ error: "Something went wrong" })
+    res.status(500).json({ error: "Something went wrong" , details: e.message})
   }
 })
 
